@@ -12,4 +12,16 @@ if (process.env.NODE_ENV !== "production") {
 
 const prisma: PrismaClient = global.prisma || new PrismaClient();
 
+// Connect to MongoDB
+async function connectToMongoDB() {
+  try {
+    await prisma.$connect();
+    console.log("Connected to MongoDB");
+  } catch (error) {
+    console.error("Error connecting to MongoDB:", error);
+  }
+}
+
+connectToMongoDB();
+
 export default prisma;
