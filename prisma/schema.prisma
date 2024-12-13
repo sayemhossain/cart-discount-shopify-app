@@ -17,11 +17,11 @@ model Session {
   expires       DateTime?
   accessToken   String
   userId        BigInt?
-  firstName     String? // Add this field
-  lastName      String? // Add this field
-  email         String? // Add this field
-  accountOwner  Boolean? // Add this field
-  locale        String? // Add this field
-  collaborator  Boolean? // Add this field
-  emailVerified Boolean? // Add this field
+  firstName     String?
+  lastName      String?
+  email         String?
+  accountOwner  Boolean?
+  locale        String?
+  collaborator  Boolean?
+  emailVerified Boolean?
 }
